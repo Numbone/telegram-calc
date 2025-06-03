@@ -2,9 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/joho/godotenv"
 	"log"
-	"os"
 	"regexp"
 
 	"github.com/Knetic/govaluate"
@@ -12,12 +10,7 @@ import (
 )
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Ошибка загрузки .env файла")
-	}
-
-	token := os.Getenv("TELEGRAM_BOT_TOKEN")
+	token := "8034778831:AAEzRGsdFrKBHZjMbBhIyW7HaYFTySlDjl0"
 	if token == "" {
 		log.Fatal("TELEGRAM_BOT_TOKEN is not set")
 	}
